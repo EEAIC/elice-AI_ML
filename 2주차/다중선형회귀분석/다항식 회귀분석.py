@@ -3,7 +3,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 from sklearn.model_selection import train_test_split
 
-
 import csv
 
 csvreader = csv.reader(open("data/Advertising.csv"))
@@ -40,6 +39,7 @@ for x_i in X:
         x_i[0] * x_i[1],
         x_i[0],
         x_i[1] * x_i[2], # X_2 * X_3
+        x_i[0] * x_i[2] ** 2,
         x_i[2] # X_3
     ])
 
